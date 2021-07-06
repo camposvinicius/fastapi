@@ -1,0 +1,15 @@
+version: '3'
+services: 
+    core_api:
+        build: .
+        container_name: "teste-vini-api"
+        
+        ports:
+            - "8000:15400"
+        volumes: 
+            - ./app/:/app
+        
+        restart: always
+
+        env_file: 
+            - ./app/.env
